@@ -29,7 +29,7 @@ ALWAYS
           OUTER_SPRINT ~style~ ~iwdee~
     END
 
-  	INCLUDE ~Smoke_and_Mirrors/Smoke_and_Mirrors.ini~
+    INCLUDE ~Smoke_and_Mirrors/Smoke_and_Mirrors.ini~
 
     INCLUDE ~Smoke_and_Mirrors/craft_settings.ini~
 
@@ -51,19 +51,19 @@ ALWAYS
 
     INCLUDE ~Smoke_and_Mirrors/lib/add_sumtable.tpa~
 
-	INCLUDE ~Smoke_and_Mirrors/lib/SEQUENCER_MENU.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/SEQUENCER_MENU.tpa~
 
     INCLUDE ~Smoke_and_Mirrors/lib/alter_effect.tpa~
 
-	INCLUDE ~Smoke_and_Mirrors/lib/remove_lines.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/remove_lines.tpa~
 
-	INCLUDE ~Smoke_and_Mirrors/lib/summon_table.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/summon_table.tpa~
 
-	INCLUDE ~Smoke_and_Mirrors/lib/splprot_attributes.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/splprot_attributes.tpa~
 
-	INCLUDE ~Smoke_and_Mirrors/lib/spell_to_innate.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/spell_to_innate.tpa~
 
-	INCLUDE ~Smoke_and_Mirrors/lib/spell_clone_effects.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/spell_clone_effects.tpa~
 
     INCLUDE ~Smoke_and_Mirrors/lib/bg2fp_effect_batches_fnp.tpa~
 
@@ -73,7 +73,7 @@ ALWAYS
 
     INCLUDE ~Smoke_and_Mirrors/lib/extra_alter_effect.tpa~
 
-  	INCLUDE ~Smoke_and_Mirrors/lib/scroll_placement.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/scroll_placement.tpa~
 
 END
 
@@ -122,19 +122,18 @@ LANGUAGE ~English~ ~english~
 //__________________________________________________________________________________
 //__________________________________________________________________________________
 //
-//			101: Install All New Spells 
+//			106: Install All New Spells 
 //__________________________________________________________________________________
 //__________________________________________________________________________________
 
-BEGIN @101  //Install All New Spells (including iwdee spells if not already installed)
+BEGIN @106  // Install All New Illusion and Divine Spells
 SUBCOMPONENT @51 //New Spells
-DESIGNATED 101
+DESIGNATED 106
 GROUP @0  //New and Revised Spells
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! ... for now~
 
 //set relevant variables
-OUTER_SET b_new_spells    = 1
-OUTER_SET b_iwdee_spells  = 1
+OUTER_SET b_smoke_spells  = 1
 
 //SR NWN deflection compatibility
 ACTION_CLEAR_ARRAY aoe_spell

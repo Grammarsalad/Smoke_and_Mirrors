@@ -20,6 +20,11 @@
 
 //@101 to @900: Components
 @101 = ~Install All New Spells (including iwdee spells if not already installed)~
+
+// unique to this mod
+@106 = ~Install All New Illusion and Divine Spells~
+//
+
 @110 = ~Local Revision: Install Revised Spells (as per the ini settings)~
 @119 = ~Local Revision: Install Goodberry: goodberry wine revision~
 
