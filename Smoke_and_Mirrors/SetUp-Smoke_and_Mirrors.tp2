@@ -2,68 +2,33 @@ BACKUP ~backup/Smoke_and_Mirrors~
 AUTHOR ~Grammarsalad~
 //README ~Smoke_and_Mirrors\Smoke_and_Mirrors_README.pdf~
 
-VERSION ~0.91.02~
+VERSION ~0.00.01~
 
 
 ALWAYS
 
-    OUTER_SPRINT ~folder~ ~Smoke_and_Mirrors~
+    OUTER_SPRINT ~folder~ ~Smoke_and_Mirrors~ // Replace "Mod_Name" with the actual mod folder name. 
+	
+//is all of this necessary???
 
- 	ACTION_IF GAME_IS ~bg2ee~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~bg2ee~
-    END
 
- 	ACTION_IF GAME_IS ~bgee~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~bgee~
-    END
 
- 	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~iwdee~
-    END
+	ACTION_IF FILE_EXISTS ~backup/Smoke_and_Mirrors\README.%LANGUAGE%.txt~ THEN BEGIN
+		AT_INTERACTIVE_EXIT ~VIEW mymod\README.%LANGUAGE%.txt~
+	END ELSE
+		AT_INTERACTIVE_EXIT ~VIEW mymod\README.txt~
+	END
+    INCLUDE ~Smoke_and_Mirrors/Spells_and_Magic_settings.ini~ 	//player set variables 
 
- 	ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
-          OUTER_SPRINT ~style~ ~bgee~
-    END
+    INCLUDE ~Smoke_and_Mirrors/lib/snm_functions.tpa~ 					//assorted functions 
 
- 	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
-          OUTER_SPRINT ~style~ ~iwdee~
-    END
+    INCLUDE ~Smoke_and_Mirrors/lib/lib.tpa~  							//morph's hla functions
 
-    INCLUDE ~Smoke_and_Mirrors/Smoke_and_Mirrors.ini~
-
-    INCLUDE ~Smoke_and_Mirrors/craft_settings.ini~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/variables.ini~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/item_casting.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/snm_functions.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/lib.tpa~  //morph's hla functions
-
-    INCLUDE ~Smoke_and_Mirrors/lib/hla_actions.tpa~  //SD's hla functions
-
-    INCLUDE ~Smoke_and_Mirrors/lib/add_headers.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/add_spell_ex.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/effect_return.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/add_sumtable.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/SEQUENCER_MENU.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/alter_effect.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/remove_lines.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/scroll_placement.tpa~
 
     INCLUDE ~Smoke_and_Mirrors/lib/summon_table.tpa~
 
     INCLUDE ~Smoke_and_Mirrors/lib/splprot_attributes.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/spell_to_innate.tpa~
-
-    INCLUDE ~Smoke_and_Mirrors/lib/spell_clone_effects.tpa~
 
     INCLUDE ~Smoke_and_Mirrors/lib/bg2fp_effect_batches_fnp.tpa~
 
@@ -71,9 +36,19 @@ ALWAYS
 
     INCLUDE ~Smoke_and_Mirrors/lib/bg2fp_effect_batches_spell_saves.tpa~
 
-    INCLUDE ~Smoke_and_Mirrors/lib/extra_alter_effect.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/ClassSpellTool.tpa~
 
-    INCLUDE ~Smoke_and_Mirrors/lib/scroll_placement.tpa~
+    INCLUDE ~Smoke_and_Mirrors/lib/item_casting.tpa~
+
+    INCLUDE ~Smoke_and_Mirrors/lib/add_headers.tpa~
+
+    INCLUDE ~Smoke_and_Mirrors/lib/add_sumtable.tpa~
+
+    INCLUDE ~Smoke_and_Mirrors/lib/SEQUENCER_MENU.tpa~
+
+    INCLUDE ~Smoke_and_Mirrors/lib/spell_to_innate.tpa~
+
+    INCLUDE ~Smoke_and_Mirrors/lib/spell_clone_effects.tpa~
 
 END
 

@@ -1,6 +1,16 @@
-﻿# Spells & Magic
+﻿# Smoke & Mirrors
 
 # log
+
+Version 00.00.01
+
+2026-10-28
+- Skeleton from Spells & Magic
+
+Everything below this line from Spells & Magic
+
+---
+
 
 2025-12-01
 
