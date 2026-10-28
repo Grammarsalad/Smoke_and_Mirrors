@@ -126,7 +126,7 @@ LANGUAGE ~English~ ~english~
 //__________________________________________________________________________________
 //__________________________________________________________________________________
 
-BEGIN @106  // Install All New Illusion and Divine Spells
+BEGIN @106  // Install All New Illusion and Install All New Illusion and Divination Spells Spells
 SUBCOMPONENT @51 //New Spells
 DESIGNATED 106
 GROUP @0  //New and Revised Spells
